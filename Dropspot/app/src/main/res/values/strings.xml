@@ -1,0 +1,109 @@
+<resources>
+
+    // shared
+    <string name="app_name">Dropspot</string>
+    <string name="no_connection">no connection</string>
+
+    // auth
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email_or_username">Email or username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="logo_descr">Dropspot logo</string>
+    <string name="login_failed">"Login failed:  "</string>
+    <string name="register_failed">"Register failed: "</string>
+    <string name="email_or_username_req">Email or username is required</string>
+    <string name="password_req">Password is required</string>
+    <string name="first_name_req">First name is required</string>
+    <string name="first_name_max_length">First name max length 50</string>
+    <string name="last_name_req">Last name is required</string>
+    <string name="last_name_max_length">Last name max length 50</string>
+    <string name="user_name_req">Username is required</string>
+    <string name="user_name_length">Username must have between 5 and 25 characters</string>
+    <string name="email_req">Email is required</string>
+    <string name="email_wrong_format">Must be an email address</string>
+    <string name="email_max_length">Email max length 100</string>
+    <string name="password_min_length">password min length 6</string>
+    <string name="password_confirmation_req">Password confirmation is required</string>
+    <string name="user_name_wrong_format">May only contain alphanumeric characters and underscores, the first character must be alphabetic</string>
+
+    // home frag
+    <string name="name">Name</string>
+    <string name="add_spot_contentdescr">floating action button to add spot</string>
+
+    // side nav
+    <string name="avatar_descr">avatar of user</string>
+    <string name="log_out">Log out</string>
+    <string name="user_not_loaded">Wait until user is loaded</string>
+
+    // Me frag
+    <string name="me">Me</string>
+    <string name="my_spots">My Spots</string>
+    <string name="favo_spots">Favorite Spots</string>
+
+    // add spot
+    <string name="damage">Damage</string>
+    <string name="street">Street</string>
+    <string name="house_number">House Number</string>
+    <string name="city">City</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="add">Add</string>
+    <string name="park">Park</string>
+    <string name="category">Category</string>
+    <string name="mark_new_spot_please">Mark spot on map</string>
+    <string name="help_img_descr">help image</string>
+    <string name="help_add_spot">Mark the map to determine the position of your new spot
+        \nand hold the marker to adjust its position</string>
+    <string name="no_park_cat_selected">No park category selected</string>
+    <string name="spot_name_req">Spot name is required</string>
+    <string name="street_req">Street is required</string>
+    <string name="house_number_req">House number is required</string>
+    <string name="city_req">City is required</string>
+    <string name="postal_code_req">Postal code is required</string>
+    <string name="state_req">State is required</string>
+    <string name="country_req">Country is required</string>
+    <string name="street_spot_added">Street spot added</string>
+    <string name="park_spot_added">Park spot added</string>
+    <string name="failed_to_add_spot">Failed to add spot</string>
+    <string name="flag_icon_descr">Icon flag, filled if not placed on map and outlined if placed</string>
+    <string name="spot_name_max_length">Max spot length is 25</string>
+
+    // Spot detail
+    <string name="skate_park_icon_descr">a picture of a skate park</string>
+    <string name="location">Location</string>
+    <string name="creator_label">Creator:</string>
+    <string name="nav_icon">Navigation icon</string>
+    <string name="like_icon">Like icon</string>
+    <string name="criterion_descr">tooltip icon description criterion</string>
+    <string name="rating">Rating</string>
+    <string name="edit">Edit</string>
+    <string name="edit_descr">Edit spot here</string>
+    <string name="delete_descr">Delete spot</string>
+    <string name="delete">Delete</string>
+    <string name="delete_spot">Are you sure you want to delete \'%1$s\'?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ranking_icon_descr">represents the ranking from 0 to 5</string>
+    <string name="vote_failed">"Voting failed: "</string>
+    <string name="favor_failed">"Favoriting failed:  "</string>
+    <string name="un_favor_failed">"Unfavoriting failed: "</string>
+
+    // session expired alert dialog
+    <string name="alert_dialog_session_expired_title">Session Expired</string>
+    <string name="alert_dialog_session_expired_message">Your session token is expired\nplease login again to regain access</string>
+    <string name="ok">OK</string>
+
+    // update spot
+    <string name="update">Update</string>
+    <string name="delete_failed">"Delete failed: "</string>
+    <string name="update_failed">"Update failed: "</string>
+    <string name="overall_score_image_descr">An icon that represents the overall score of the spot</string>
+
+</resources>

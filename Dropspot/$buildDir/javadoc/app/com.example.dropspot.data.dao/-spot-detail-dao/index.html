@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SpotDetailDao - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.example.dropspot.data.dao</a>&nbsp;/&nbsp;<a href="./index.html">SpotDetailDao</a><br/>
+<br/>
+<h1>SpotDetailDao</h1>
+<code><span class="keyword">interface </span><span class="identifier">SpotDetailDao</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.dao.SpotDetailDao$delete(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-spot-detail-by-creator-id.html">getSpotDetailByCreatorId</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getSpotDetailByCreatorId</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.dao.SpotDetailDao$getSpotDetailByCreatorId(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-spot-detail-by-id.html">getSpotDetailById</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getSpotDetailById</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.dao.SpotDetailDao$getSpotDetailById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-spot-liked-spot-details.html">getSpotLikedSpotDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getSpotLikedSpotDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="insert.html">insert</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">insert</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.dao.SpotDetailDao$insert(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="insert-all.html">insertAll</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">insertAll</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.dao.SpotDetailDao$insertAll(kotlin.collections.List((com.example.dropspot.data.model.SpotDetail)))/spots">spots</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

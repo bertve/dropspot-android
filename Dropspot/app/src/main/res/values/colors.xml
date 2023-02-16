@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#27353d</color>
+    <color name="primary_color_light">#505f67</color>
+    <color name="primary_color_dark">#000f17</color>
+
+    <color name="secondary_color">#80e29d</color>
+    <color name="secondary_color_light">#b3ffce</color>
+    <color name="secondary_color_dark">#4daf6e</color>
+
+    <color name="error">#B00020</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#888888</color>
+    <color name="grey_dark">#4A4A4A</color>
+    <color name="helmet_light_blue">#75cef9</color>
+    <color name="helmet_dark_blue">#5ea5ec</color>
+</resources>

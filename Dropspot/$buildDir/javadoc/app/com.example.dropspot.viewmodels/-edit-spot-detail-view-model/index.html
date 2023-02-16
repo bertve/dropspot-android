@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EditSpotDetailViewModel - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.example.dropspot.viewmodels</a>&nbsp;/&nbsp;<a href="./index.html">EditSpotDetailViewModel</a><br/>
+<br/>
+<h1>EditSpotDetailViewModel</h1>
+<code><span class="keyword">class </span><span class="identifier">EditSpotDetailViewModel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewModel</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EditSpotDetailViewModel</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$<init>(com.example.dropspot.data.repos.SpotDetailRepository)/spotDetailRepository">spotDetailRepository</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.repos/-spot-detail-repository/index.html"><span class="identifier">SpotDetailRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="spot-detail.html">spotDetail</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">spotDetail</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-success.html">updateSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">updateSuccess</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="update-park-spot.html">updateParkSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateParkSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/street">street</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/number">number</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/city">city</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/postal">postal</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/state">state</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/country">country</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/cat">cat</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateParkSpot(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Double)/fee">fee</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-street-spot.html">updateStreetSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateStreetSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.EditSpotDetailViewModel$updateStreetSpot(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

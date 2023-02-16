@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SpotDetailRepository - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.example.dropspot.data.repos</a>&nbsp;/&nbsp;<a href="./index.html">SpotDetailRepository</a><br/>
+<br/>
+<h1>SpotDetailRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">SpotDetailRepository</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SpotDetailRepository</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$<init>(com.example.dropspot.network.SpotService, com.example.dropspot.data.dao.SpotDetailDao, com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDao)/spotService">spotService</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.network/-spot-service/index.html"><span class="identifier">SpotService</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$<init>(com.example.dropspot.network.SpotService, com.example.dropspot.data.dao.SpotDetailDao, com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDao)/spotDetailDao">spotDetailDao</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.dao/-spot-detail-dao/index.html"><span class="identifier">SpotDetailDao</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$<init>(com.example.dropspot.network.SpotService, com.example.dropspot.data.dao.SpotDetailDao, com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDao)/userService">userService</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.network/-user-service/index.html"><span class="identifier">UserService</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$<init>(com.example.dropspot.network.SpotService, com.example.dropspot.data.dao.SpotDetailDao, com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDao)/spotDao">spotDao</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.dao/-spot-dao/index.html"><span class="identifier">SpotDao</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="delete-spot.html">deleteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">deleteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$deleteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="favorite-spot.html">favoriteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">favoriteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$favoriteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch-all-spot-details.html">fetchAllSpotDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchAllSpotDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch-spot-detail-by-spot-id.html">fetchSpotDetailBySpotId</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchSpotDetailBySpotId</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$fetchSpotDetailBySpotId(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-spot-detail-by-spot-id.html">getSpotDetailBySpotId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSpotDetailBySpotId</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$getSpotDetailBySpotId(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="un-favorite-spot.html">unFavoriteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">unFavoriteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$unFavoriteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-park-spot.html">updateParkSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">updateParkSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$updateParkSpot(com.example.dropspot.data.model.requests.ParkSpotUpdateRequest, com.example.dropspot.data.model.SpotDetail)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model.requests/-park-spot-update-request/index.html"><span class="identifier">ParkSpotUpdateRequest</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$updateParkSpot(com.example.dropspot.data.model.requests.ParkSpotUpdateRequest, com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-street-spot.html">updateStreetSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">updateStreetSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$updateStreetSpot(com.example.dropspot.data.model.requests.StreetSpotRequest, com.example.dropspot.data.model.SpotDetail)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model.requests/-street-spot-request/index.html"><span class="identifier">StreetSpotRequest</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$updateStreetSpot(com.example.dropspot.data.model.requests.StreetSpotRequest, com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="vote.html">vote</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">vote</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$vote(kotlin.Long, kotlin.Long, com.example.dropspot.data.model.requests.VoteRequest)/spotId">spotId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$vote(kotlin.Long, kotlin.Long, com.example.dropspot.data.model.requests.VoteRequest)/criterionId">criterionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.SpotDetailRepository$vote(kotlin.Long, kotlin.Long, com.example.dropspot.data.model.requests.VoteRequest)/voteRequest">voteRequest</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model.requests/-vote-request/index.html"><span class="identifier">VoteRequest</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

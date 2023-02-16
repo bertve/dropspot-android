@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SpotDetailViewModel - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.example.dropspot.viewmodels</a>&nbsp;/&nbsp;<a href="./index.html">SpotDetailViewModel</a><br/>
+<br/>
+<h1>SpotDetailViewModel</h1>
+<code><span class="keyword">class </span><span class="identifier">SpotDetailViewModel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewModel</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SpotDetailViewModel</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$<init>(com.example.dropspot.data.repos.SpotDetailRepository)/spotDetailRepository">spotDetailRepository</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.repos/-spot-detail-repository/index.html"><span class="identifier">SpotDetailRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="delete-success.html">deleteSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">deleteSuccess</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="favorite-success.html">favoriteSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">favoriteSuccess</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="un-favorite-success.html">unFavoriteSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">unFavoriteSuccess</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="vote-success.html">voteSuccess</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">voteSuccess</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model.responses/-message-response/index.html"><span class="identifier">MessageResponse</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="delete-spot.html">deleteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$deleteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="favorite-spot.html">favoriteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">favoriteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$favoriteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-spot-detail.html">getSpotDetail</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSpotDetail</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-spot-id.html">setSpotId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setSpotId</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$setSpotId(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="un-favorite-spot.html">unFavoriteSpot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unFavoriteSpot</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$unFavoriteSpot(com.example.dropspot.data.model.SpotDetail)/spotDetail">spotDetail</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="vote.html">vote</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">vote</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$vote(kotlin.Long, kotlin.Double)/criterionId">criterionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.viewmodels.SpotDetailViewModel$vote(kotlin.Long, kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

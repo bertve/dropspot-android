@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MeRepository - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.example.dropspot.data.repos</a>&nbsp;/&nbsp;<a href="./index.html">MeRepository</a><br/>
+<br/>
+<h1>MeRepository</h1>
+<code><span class="keyword">class </span><span class="identifier">MeRepository</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MeRepository</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.MeRepository$<init>(com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDetailDao)/userService">userService</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.network/-user-service/index.html"><span class="identifier">UserService</span></a><span class="symbol">, </span><span class="identifier" id="com.example.dropspot.data.repos.MeRepository$<init>(com.example.dropspot.network.UserService, com.example.dropspot.data.dao.SpotDetailDao)/spotDetailDao">spotDetailDao</span><span class="symbol">:</span>&nbsp;<a href="../../com.example.dropspot.data.dao/-spot-detail-dao/index.html"><span class="identifier">SpotDetailDao</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="fetch-me.html">fetchMe</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchMe</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.example.dropspot.data.model/-app-user/index.html"><span class="identifier">AppUser</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch-my-favorite-spots.html">fetchMyFavoriteSpots</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchMyFavoriteSpots</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch-my-spots.html">fetchMySpots</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchMySpots</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-my-favorite-spots.html">getMyFavoriteSpots</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMyFavoriteSpots</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-my-spots.html">getMySpots</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMySpots</span><span class="symbol">(</span><span class="identifier" id="com.example.dropspot.data.repos.MeRepository$getMySpots(kotlin.Long)/userId">userId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.example.dropspot.data.model/-spot-detail/index.html"><span class="identifier">SpotDetail</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

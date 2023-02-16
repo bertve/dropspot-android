@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.example.dropspot.viewmodels.EditSpotDetailViewModel" />
+
+        <variable
+            name="spot_detail"
+            type="com.example.dropspot.data.model.SpotDetail" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/spot_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/skate_park_icon_descr"
+            app:layout_constraintBottom_toTopOf="@+id/layout_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_park" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_name"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/name"
+            app:layout_constraintBottom_toTopOf="@+id/layout_park_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.spotName}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_park_category"
+            style="@style/dropdown_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/category"
+            app:layout_constraintBottom_toTopOf="@+id/layout_street"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/dropdown_park_category"
+                style="@style/text_input_main"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/damage_label_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/damage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/layout_park_category" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_fee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/damage"
+            android:stepSize="0.05"
+            android:value="@{spot_detail.saveSliderValueForEntranceFee}"
+            android:valueFrom="0.0"
+            android:valueTo="10.0"
+            app:layout_constraintBottom_toTopOf="@+id/layout_houseNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline">
+
+        </com.google.android.material.slider.Slider>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_street"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/street"
+            app:layout_constraintBottom_toTopOf="@+id/layout_city"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_street"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.street}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_houseNumber"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/house_number"
+            app:layout_constraintBottom_toTopOf="@+id/layout_postalCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_houseNumber"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.houseNumber}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_city"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/city"
+            app:layout_constraintBottom_toTopOf="@+id/layout_state"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_city"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.city}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_postalCode"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/postal_code"
+            app:layout_constraintBottom_toTopOf="@+id/layout_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_postalCode"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.street}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_state"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="@string/state"
+            app:layout_constraintBottom_toTopOf="@+id/btn_update"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_state"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.state}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_country"
+            style="@style/text_layout_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="@string/country"
+            app:layout_constraintBottom_toTopOf="@+id/btn_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_country"
+                style="@style/text_input_main"
+                android:text="@{spot_detail.address.country}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_park"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{spot_detail.park? View.VISIBLE : View.GONE}"
+            app:constraint_referenced_ids="slider_fee
+                        ,layout_park_category
+                        ,layout_street
+                        ,layout_houseNumber
+                        ,layout_city
+                        ,layout_postalCode
+                        ,layout_state
+                        ,layout_country
+                        ,damage_label_home"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

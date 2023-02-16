@@ -1,0 +1,136 @@
+plugins{
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'org.jetbrains.dokka-android'
+    id "org.jlleitschuh.gradle.ktlint" version "9.4.1"
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.example.dropspot"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner
+        vectorDrawables.useSupportLibrary = true
+        def secureProps = new Properties()
+        if (file("../keystore.properties").exists()) {
+            file("../keystore.properties")?.withInputStream { secureProps.load(it) }
+        }
+        resValue "string", "maps_api_key", (secureProps.getProperty("MAPS_API_KEY") ?: "")
+        buildConfigField 'String','BASE_URL', "\"https://dropspot-rest-api.herokuapp.com/\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dokka{
+        outputFormat = 'html'
+        outputDirectory = '$buildDir/javadoc'
+        // Do not output deprecated members
+        skipDeprecated = true
+        // Emit warnings about not documented members.
+        reportUndocumented = true
+    }
+
+    lintOptions {
+        disable "UnsafeExperimentalUsageError",
+                "UnsafeExperimentalUsageWarning"
+    }
+}
+
+dependencies {
+    //CORE DEPENDENCIES
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //viewmodel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+
+    //testing
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'androidx.test:core:1.3.0'
+    testImplementation 'androidx.test:runner:1.3.0'
+    testImplementation 'androidx.test:rules:1.3.0'
+    testImplementation 'androidx.test.ext:junit:1.1.2'
+    testImplementation 'androidx.test.ext:truth:1.3.0'
+    testImplementation 'com.google.truth:truth:1.1'
+
+    //navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
+
+    //material
+    implementation "com.google.android.material:material:$material_version"
+
+    //room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutine_version"
+
+    //3TH PARTY DEPENDENCIES
+    //maps
+    implementation "com.google.android.gms:play-services-maps:$maps_version"
+    implementation "com.google.android.gms:play-services-location:17.1.0"
+    implementation "com.karumi:dexter:5.0.0"
+
+    // Koin
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit: $retrofit_version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    //json de/serialization
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    //form validation
+    implementation "com.mobsandgeeks:android-saripaar:$saripaar_version"
+
+    //animations
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    //encryption
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+}

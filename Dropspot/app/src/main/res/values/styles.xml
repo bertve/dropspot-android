@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_color_light</item>
+        <item name="colorOnSecondary">@color/primary_color_dark</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/primary_color_dark</item>
+
+        <item name="background">@color/white</item>
+        <item name="colorOnBackground">@color/primary_color_dark</item>
+
+        <item name="android:statusBarColor">@color/primary_color_dark</item>
+        <item name="android:colorControlNormal">@color/white</item>
+
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+
+        <item name="colorControlNormal">@color/white</item>
+
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1
+        </item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2
+        </item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3
+        </item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2
+        </item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+    </style>
+
+    <style name="title_no_padding">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="title" parent="title_no_padding">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="title_left" parent="title">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="subtitle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">@dimen/subtitle</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="myCustomRatingBar" parent="@android:style/Widget.Material.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_layer_list</item>
+        <item name="android:maxHeight">@dimen/customRatingBarHeight</item>
+    </style>
+
+    <style name="text_layout_main" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="dropdown_main" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="text_input_main">
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="card_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/card_title</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="icon">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+    </style>
+
+    <style name="icon_big">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+
+    <dimen name="customRatingBarHeight">32dp</dimen>
+</resources>

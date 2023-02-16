@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dropspot.fragments.HomeFragment"
+        android:label=""
+        tools:layout="@layout/home_fragment">
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_meFragment"
+            app:destination="@id/meFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_spotDetailFragment"
+            app:destination="@id/spotDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.example.dropspot.fragments.MeFragment"
+        android:label=""
+        tools:layout="@layout/me_fragment">
+        <argument
+            android:name="user"
+            app:argType="com.example.dropspot.data.model.AppUser" />
+        <action
+            android:id="@+id/action_meFragment_to_spotDetailFragment"
+            app:destination="@id/spotDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/spotDetailFragment"
+        android:name="com.example.dropspot.fragments.SpotDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_spot_detail">
+        <argument
+            android:name="spotId"
+            app:argType="long" />
+
+        <argument
+            android:name="owner"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_spotDetailFragment_to_editSpotDetailFragment"
+            app:destination="@id/editSpotDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/editSpotDetailFragment"
+        android:name="com.example.dropspot.fragments.EditSpotDetailFragment"
+        android:label=""
+        tools:layout="@layout/edit_spot_detail_fragment">
+        <argument
+            android:name="spotDetail"
+            app:argType="com.example.dropspot.data.model.SpotDetail" />
+    </fragment>
+
+</navigation>
